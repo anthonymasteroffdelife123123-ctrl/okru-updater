@@ -1,0 +1,30 @@
+name: Actualizar URLs OK.ru
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Instalar yt-dlp
+        run: pip install yt-dlp
+
+      - name: Ejecutar extractor
+        run: python extractor.py
+
+      - name: Guardar cambios
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🔄 URLs actualizadas automáticamente"
+          file_pattern: urls_frescas.txt
