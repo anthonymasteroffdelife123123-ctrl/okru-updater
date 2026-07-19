@@ -1,11 +1,13 @@
 name: Actualizar URLs OK.ru
 
 on:
+  push:
+    paths:
+      - 'urls.txt'          # 🔥 Se ejecuta cuando subes urls.txt
   schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+    - cron: '0 */6 * * *'   # También cada 6 horas por si acaso
+  workflow_dispatch:        # Manual si quieres
 
-# 👇 AGREGA ESTAS DOS LÍNEAS EXACTAMENTE ASÍ 👇
 permissions:
   contents: write
 
