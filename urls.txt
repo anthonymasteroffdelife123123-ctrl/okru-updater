@@ -44,3 +44,5 @@ https://ok.ru/videoembed/6911120640678
 https://ok.ru/videoembed/8482231093855
 https://ok.ru/videoembed/8482231028319
 https://ok.ru/videoembed/4658593663605
+https://{ title:"Barbie en La princesa y la costurera (2004)", iframe:"https://vkvideo.ru/video213425839_169459459", manualPoster:"https://www.lavanguardia.com/peliculas-series/images/movie/poster/2019/3/w300/dGfyZHsyDa4Ukg3bbABjgy0vckQ.jpg", manualBackdrop:"https://www.lavanguardia.com/peliculas-series/images/all/movie/backdrops/2019/3/movie-575222/w1280/j2cGilaRCOHun7TU0Oo9nZGUX8P.jpg", manualSinopsis:"Nobita descubre una Luna que se vuelve de color amarillo, y decide averiguar qué ha ocurrido.", manualIdioma:"Sub-Español", manualVotos:"315", manualEstado:"", manualRuntime:"1h 10", manualYear:"2019", manualGenres:"Familia, Animación", manualRating:"6.8" },
+https://{ title:"Barbie (2023)", iframe:"https://vkvideo.ru/video836029439_456239566", manualPoster:"", manualBackdrop:"", manualSinopsis:"", manualIdioma:"", manualVotos:"", manualEstado:"", manualRuntime:"", manualYear:"", manualGenres:"", manualRating:"" },
