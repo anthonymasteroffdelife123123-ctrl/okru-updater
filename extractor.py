@@ -23,6 +23,7 @@ for url in urls:
     except Exception as e:
         resultados.append(f"❌ FALLO: {url}")
 
+# 🔥 CORREGIDO: urls_frescas.txt (sin "c" extra)
 with open('urls_frescas.txt', 'w', encoding='utf-8') as f:
     f.write('\n'.join(resultados))
 
