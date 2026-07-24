@@ -1,25 +1,16 @@
 name: Update URLs
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'urls.txt'
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   update:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
     
     - name: Install yt-dlp
       run: pip install yt-dlp
@@ -30,7 +21,7 @@ jobs:
     - name: Commit and push
       run: |
         git config user.name "GitHub Actions"
-        git config.user.email "actions@github.com"
+        git config user.email "actions@github.com"
         git add urls_frescas.txt
         git diff --staged --quiet || git commit -m "🔄 Actualización automática"
         git push
