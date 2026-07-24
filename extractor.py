@@ -1,6 +1,5 @@
 import subprocess
 import os
-import re
 
 if os.path.exists('urls.txt'):
     with open('urls.txt', 'r', encoding='utf-8') as f:
