@@ -1,0 +1,37 @@
+name: Update Categorías Automático
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'categorias/**/urls.txt'
+  schedule:
+    - cron: '0 */6 * * *'  # Cada 6 horas
+  workflow_dispatch:
+
+jobs:
+  update-categorias:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Install yt-dlp
+      run: pip install yt-dlp
+    
+    - name: Run categorias extractor
+      run: python extractor_categorias.py
+    
+    - name: Commit and push cambios
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add categorias/**/*.json
+        git add categorias/**/urls_frescas.txt
+        git diff --staged --quiet || git commit -m "🔄 Actualización automática de categorías"
+        git push
